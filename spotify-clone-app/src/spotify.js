@@ -2,12 +2,18 @@ export const authEndpoint = "https://accounts.spotify.com/authorize";
 
 const clientId = "70a1fcc1b4bb4cc6a368e2f0adea3b08";
 const redirectUri = "https://ptd-spotify-clone.web.app/";
+// const redirectUri = "http://localhost:3000/";
 const scopes = [
+  "user-read-private",
+  "user-read-email",
+  "user-modify-playback-state",
+  "user-read-playback-state",
   "user-read-currently-playing",
   "user-read-recently-played",
-  "user-read-playback-state",
   "user-top-read",
-  "user-modify-playback-state",
+  "user-library-read",
+  "user-library-modify",
+  "playlist-modify-private",
 ];
 
 export const getTokenFromResponse = () => {
